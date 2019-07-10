@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <licenses>
         <license>
@@ -18,28 +17,29 @@
             <organizationUrl>https://github.com/mkatircioglu/maven-archetype-swagger</organizationUrl>
         </developer>
     </developers>
-	
-	<scm>
+
+    <scm>
         <connection>scm:git:git://github.com/mkatircioglu/maven-archetype-swagger.git</connection>
         <developerConnection>scm:git:ssh://github.com:mkatircioglu/maven-archetype-swagger.git</developerConnection>
         <url>>https://github.com/mkatircioglu/maven-archetype-swagger</url>
     </scm>
-	
-	<name>Swagger Maven Archetype</name>
+
+    <name>Swagger Maven Archetype</name>
     <description>A custom Maven archetype multi-module project that can be used as a skeleton to create other projects.</description>
     <url>http://mkatircioglu.github.io</url>
     <groupId>io.github.mkatircioglu</groupId>
     <artifactId>maven-archetype-swagger</artifactId>
     <version>1.0.0-RELEASE</version>
     <packaging>jar</packaging>
-	
-	<properties>
+
+    <properties>
         <java.version>1.8</java.version>
         <plugin.maven.compiler.version>3.7.0</plugin.maven.compiler.version>
-        <plugin.maven.deploy.version>2.8.2</plugin.maven.deploy.version>
+        <plugin.maven.source.version>3.1.0</plugin.maven.source.version>
+        <plugin.maven.javadoc.version>3.1.0</plugin.maven.javadoc.version>
     </properties>
-	
-	<build>
+
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,11 +52,29 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>${plugin.maven.deploy.version}</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${plugin.maven.source.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${plugin.maven.javadoc.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
