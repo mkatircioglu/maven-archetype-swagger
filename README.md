@@ -1,4 +1,4 @@
-# maven-archetype-swagger
+# maven-archetype-swagger [![Build Status](https://travis-ci.com/mkatircioglu/maven-archetype-swagger.svg?token=8GAU4h1fx7G5QDqGjD51&branch=master)](https://travis-ci.com/mkatircioglu/maven-archetype-swagger)
 
 A custom Maven archetype for creating multi-module project that can be used as a skeleton with [swagger-codegen-templates](https://github.com/mkatircioglu/swagger-codegen-templates). 
 
