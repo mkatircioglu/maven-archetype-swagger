@@ -83,7 +83,7 @@
         <repository>
             <id>bintray-mkatircioglu-release</id>
             <name>mkatircioglu-release</name>
-            <url>https://api.bintray.com/maven/mkatircioglu/release/maven-archetype-swagger/;publish=1</url>
+            <url>https://api.bintray.com/maven/mkatircioglu/release/maven-archetype-swagger/;publish=1;override=1</url>
         </repository>
     </distributionManagement>
 </project>

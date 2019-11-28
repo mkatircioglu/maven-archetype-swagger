@@ -124,4 +124,14 @@
       </plugins>
     </pluginManagement>
   </build>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>bintray-mkatircioglu-release</id>
+      <name>bintray-plugins</name>
+      <url>https://dl.bintray.com/mkatircioglu/release</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
